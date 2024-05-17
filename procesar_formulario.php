@@ -1,8 +1,8 @@
 <!-- procesar_formulario.php -->
 <?php
-$servername = "servidorproyecto.mysql.database.azure.com";
-$username = "proy2";
-$password = "Edgar270901##$";
+$servername = "servidorproyec.mysql.database.azure.com";
+$username = "admi3";
+$password = "Andreamariana34";
 $dbname = "dbproyecto2";
 
 // Crear conexión
