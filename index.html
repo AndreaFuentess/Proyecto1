@@ -1,35 +1,17 @@
+<!-- formulario.php -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario</title>
+    <title>Formulario de Captura</title>
 </head>
 <body>
-  <form id="data-form">
-    <input type="text" id="name" name="name" placeholder="Nombre" required>
-    <input type="email" id="email" name="email" placeholder="Email" required>
-    <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-  <div id="response"></div>
-
-  <script>
-    document.getElementById('data-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-
-      const response = await fetch('/data', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message })
-      });
-
-      const result = await response.json();
-      document.getElementById('response').textContent = JSON.stringify(result);
-    });
-  </script>
+    <h1>Captura de Información</h1>
+    <form action="procesar_formulario.php" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
