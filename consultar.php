@@ -1,7 +1,7 @@
 <!-- consultar.php -->
 <?php
 $servername = "servidorproyec.mysql.database.azure.com";
-$username = "Admi3";
+$username = "admi3";
 $password = "Andreamariana34";
 $dbname = "dbproyecto2";
 
